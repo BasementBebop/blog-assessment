@@ -1,12 +1,10 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
-    render :index
   end
 
   def show
     @post = Post.find(params[:id])
-    render :show
   end
 
   def new
@@ -42,4 +40,5 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to posts_path
   end
+
 end
